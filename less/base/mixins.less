@@ -1,0 +1,29 @@
+.flex(@justify:flex-start, @align:stretch, @direction:row) {
+  display: flex;
+  flex-direction:@direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+.list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.button-reset() {
+  border: 0 transparent;
+  text-decoration: none;
+}
+
+.font(@size, @line, @color, @weight: 400) {
+  font-size: @size;
+  line-height: @line;
+  color: @color;
+  font-weight: @weight;
+}
+
+.iframe-reset() {
+  border: none;
+  display: block;
+}

@@ -1,0 +1,169 @@
+.footer {
+  background-color: @color-white;
+  padding: 80px 48px 49px;
+  font-family: @font-family-walsheim-pro;
+  .font(14px, 15px, @color-474442);
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    background-color: @background-color-f5f4f2;
+  }
+}
+
+.footer__container {
+  padding: 48px 0 20px;
+  background-color: @color-white;
+}
+
+.footer__top {
+  padding: 0 48px 32px;
+  border-bottom: 1px solid @color-e0deda;
+  @media (min-width: @tablet-width) {
+    .flex(space-between,stretch);
+  }
+}
+
+.footer__middle {
+  padding: 32px 32px 32px;
+
+  span {
+    display: block;
+    font-family: @font-family-walsheim-pro;
+    .font(14px, 15px, @color-474442);
+    margin-bottom: 15px;
+  }
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+}
+
+.footer__bottom {
+  padding: 0 32px 0;
+  @media (min-width: @tablet-width) {
+    .flex(space-between, center);
+  }
+}
+
+.footer__logo {
+  margin-bottom: 32px;
+  flex-shrink: 1;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-right: 44px;
+  }
+}
+
+.footer__nav {
+  .list-reset();
+
+  p {
+    font-family: @font-family-walsheim-pro;
+    .font(16px, 19px, @color-474442, 700);
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    font-family: @font-family-walsheim-pro;
+    .font(16px, 22px, @color-474442);
+  }
+
+  a:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @media (min-width: @tablet-width) {
+    .flex(justify-content,stretch);
+    text-align: left;
+  }
+}
+
+.footer__nav-item:not(:last-child) {
+  margin-bottom: 24px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-right: 64px;
+    }
+  }
+
+.footer__socials {
+  .list-reset();
+  .flex(center, center);
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: @tablet-width) {
+    margin:0;
+    justify-content: flex-start;
+  }
+}
+
+.footer__socials-item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid @color-e0deda;
+  .flex(center, center);
+  flex-shrink: 1;
+
+  a {
+    display: block;
+    width: 17px;
+    height: 15px;
+  }
+
+  &--telegram {
+    a {
+      mask-image: ~'url("img/stack.svg#telegram")';
+      background-color: @color-474442;
+    }
+  }
+
+  &--facebook {
+    a {
+      mask-image: ~'url("img/stack.svg#facebook")';
+      background-color: @color-474442;
+    }
+  }
+
+  &--instagram {
+    a {
+      mask-image: ~'url("img/stack.svg#instagram")';
+      background-color: @color-474442;
+    }
+  }
+
+  &--vkontakte {
+    a {
+      mask-image: ~'url("img/stack.svg#vkontakte")';
+      background-color: @color-474442;
+    }
+  }
+
+  &--tiktok {
+    a {
+      mask-image: ~'url("img/stack.svg#tiktok")';
+      background-color: @color-474442;
+    }
+  }
+}
+
+.footer__rights {
+  max-width: 100%;
+  margin-bottom: 24px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.footer__politics {
+  display: block;
+  font-family: @font-family-walsheim-pro;
+  .font(14px, 15px, @color-474442);
+  text-decoration: none;
+  margin-bottom: 24px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
