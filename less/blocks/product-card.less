@@ -1,0 +1,142 @@
+.product-card {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  color: #474442;
+}
+
+.product-card__list {
+  .list-reset();
+  padding-top: 384px;
+  display: flex;
+  gap: 8px;
+  background-color: aqua;
+  overflow: hidden;
+}
+
+.product-card__item {
+  min-width: 90px;
+  height: 90px;
+  background-color: bisque;
+}
+
+.product-card__item--current {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 375px;
+  height: 360px;
+  margin-bottom: 24px;
+  background-color: #F5F4F2;
+}
+
+.product-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  gap: 16px;
+}
+
+.product-card__header-title {
+  font-family: @forum;
+  .font-sizes(32px; 38px; 400);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.product-card__header-description {
+  font-family: @walsheimpro;
+  .font-sizes(16px; 20px; 400);
+  margin: 0;
+  text-align: center;
+}
+
+.product-card__header-price {
+  font-family: @walsheimpro;
+  .font-sizes(24px; 28px; 500);
+  margin-bottom: 8px;
+}
+
+.product-card__header-price-currency {
+  color: #acacac;
+}
+
+.product-card__header-add-button {
+  font-family: @walsheimpro;
+  .font-sizes(16px; 19px; 500);
+  letter-spacing: -0.02em;
+  width: 100%;
+  padding: 19px 0;
+  margin: 0;
+  border: none;
+  color: #ffffff;
+  background-color: #474442;
+}
+
+.product-card__detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #e0deda;
+}
+
+// * Тоже что и product-card__header-title
+.product-card__detail-title {
+  font-family: @forum;
+  .font-sizes(32px; 38px; 400);
+  margin: 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.product-card__detail-list-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__detail-list-title {
+  .font-sizes(16px; 22px; 400);
+  font-family: @walsheimpro;
+  letter-spacing: -0.02em;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.product-card__detail-list {
+  .list-reset();
+}
+
+.product-card__detail-item {
+  .font-sizes(14px; 16px; 400);
+  font-family: @walsheimpro;
+  display: grid;
+  grid-template-columns: 202px 1fr;
+  column-gap: 2px;
+  align-items: center;
+  padding: 7px 0;
+  margin-bottom: 4px;
+}
+
+.product-card__detail-name {
+  color: #acacac;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2px;
+}
+
+.product-card__detail-name::after {
+  position: relative;
+  top: 16px;
+  right: 0;
+  height: 1px;
+  background-color: #e0deda;
+  content: '';
+}
+
+.product-card__detail-description {
+  margin: 0;
+}
