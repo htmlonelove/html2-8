@@ -1,0 +1,65 @@
+{
+  "name": "html2-8",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlonelove/html2-8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/htmlonelove/html2-8/issues"
+  },
+  "homepage": "https://github.com/htmlonelove/html2-8#readme",
+  "devDependencies": {
+    "autoprefixer": "10.4.0",
+    "browser-sync": "^2.29.3",
+    "browser-sync-client": "^3.0.2",
+    "del": "^7.1.0",
+    "gulp": "4.0.2",
+    "gulp-debug": "^5.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-less": "5.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-squoosh": "^0.11.0",
+    "gulp-stacksvg": "^3.0.0",
+    "gulp-stats": "^1.0.2",
+    "gulp-svgmin": "^4.1.0",
+    "postcss": "8.3.11",
+    "postcss-csso": "^6.0.1",
+    "stylelint": "13.13.1",
+    "svgo": "^3.3.2"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"less/**/*.less\" --syntax less",
+    "lint": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "*.html",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
+  "engines": {
+    "node": "^18"
+  },
+  "type": "module",
+  "volta": {
+    "node": "16.20.2"
+  }
+}
