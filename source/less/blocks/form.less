@@ -10,7 +10,76 @@
   gap: 32px;
 }
 
+.form__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__content {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.form__image-wrapper {
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #e0deda;
+  background-color: #f5f4f2;
+}
+
 .form__image {
   width: 52px;
   height: 42px;
+  object-fit: cover;
+}
+
+.form__product-name {
+  margin: 0;
+  width: 187px;
+  text-decoration: none;
+  text-align: left;
+}
+
+.form__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #474442;
+}
+
+.form__description {
+  margin: 0;
+  max-width: 153px;
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #acacac;
+}
+
+.form__product-button {
+  position: relative;
+  width: 48px;
+  background-color: #ffffff;
+  border: 1px solid #e0deda;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 2px;
+    left: 17px;
+    top: 36px;
+    background-color: #474442;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
