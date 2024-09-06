@@ -12,8 +12,18 @@
 .form__item {
   position: relative;
   padding: 32px 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 80px 126px 111px auto;
+  grid-template-rows: 80px auto auto;
+  row-gap: 10px;
+
+  @media (min-width: @desktop-width) {
+    border: 1px solid #e0deda;
+    grid-template-columns: 120px 485px 487px auto;
+    grid-template-rows: 129px;
+    row-gap: 0;
+    padding: 0;
+  }
 }
 
 .form__item:not(:last-child)::after,
@@ -26,35 +36,58 @@
   background: #ebebeb;
   bottom: 0;
   right: 0;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .form__item:not(:last-child)::after {
   left: 0;
-}
 
-.form__content {
-  display: flex;
-  margin-bottom: 16px;
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .form__image-wrapper {
-  margin-right: 20px;
-  width: 80px;
-  height: 80px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #e0deda;
   background-color: #f5f4f2;
+
+  @media (min-width: @desktop-width) {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+  }
 }
 
-.form__image {
-  padding-top: 16px;
+.form__image img {
+  display: block;
   object-fit: cover;
 }
 
 .form__product-name {
   margin: 0;
+  padding-left: 20px;
+  grid-column: 2/4;
+  grid-row: 1/2;
   width: 187px;
   text-decoration: none;
   text-align: left;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 24px;
+    grid-column: 2/3;
+    align-self: center;
+    width: 336px;
+  }
 }
 
 .form__title {
@@ -65,6 +98,11 @@
   font-size: 16px;
   line-height: 19px;
   color: #474442;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .form__description {
@@ -75,6 +113,10 @@
   font-size: 14px;
   line-height: 17px;
   color: #acacac;
+
+  @media (min-width: @desktop-width) {
+    max-width: 336px;
+  }
 }
 
 .form__product-button {
@@ -82,6 +124,8 @@
   width: 48px;
   background-color: #ffffff;
   border: 1px solid #e0deda;
+  grid-column: 4/5;
+  grid-row: 1/2;
 
   &::before,
   &::after {
@@ -98,22 +142,33 @@
   &::after {
     transform: rotate(-45deg);
   }
-}
 
-.form__product-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  @media (min-width: @desktop-width) {
+    grid-column: 4/5;
+    width: 90px;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+
+    &::before,
+    &::after {
+      top: 60px;
+      left: 35px;
+    }
+  }
 }
 
 .form__info-names {
+  padding-top: 6px;
+  grid-column: 1/5;
+  grid-row: 2/3;
   display: grid;
   grid-template-columns: repeat(3, auto);
   text-align: left;
-}
 
-.form__info-names .form__info-text--hide {
-  display: none;
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .form__info-text {
@@ -124,11 +179,31 @@
   color: #5f5f5f;
 }
 
+//--head
+.form__info-names--head {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 559px 132px 102px auto;
+    gap: 44px;
+    margin-bottom: 16px;
+  }
+}
+
 .form__info-prices {
+  grid-column: 1/5;
+  grid-row: 3/4;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 45px;
+  gap: 47px;
   text-align: left;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 129px 100px auto;
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
 }
 
 .form__field,
@@ -142,19 +217,27 @@
 
 .form__field {
   width: 56px;
+  height: 40px;
   padding: 9px 16px;
   border: none;
   outline: 1px solid #e0deda;
+
+  @media (min-width: @desktop-width) {
+    height: 46px;
+    align-self: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
 
 .form__info-price {
   margin: 0;
   align-self: center;
-  font-family: "GTWalsheimPro", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  color: #474442;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .form__info-price-value,
@@ -184,12 +267,36 @@
   &::after {
     left: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 41px 0 41px 40px;
+    border: 1px solid #e0deda;
+    border-top: none;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .form__group--promo .form__field {
   margin-right: 16px;
   padding: 16px;
   width: 229px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #474442;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    width: 338px;
+  }
+}
+
+.form__group--promo .form__field::placeholder {
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: #474442;
@@ -203,10 +310,19 @@
   text-decoration: underline;
   color: #474442;
   background-color: transparent;
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 27px;
+    text-decoration: none;
+  }
 }
 
 .form__order {
   padding-top: 24px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 48px;
+  }
 }
 
 .form__order-total {
@@ -223,6 +339,11 @@
   font-size: 24px;
   line-height: 28px;
   color: #474442;
+
+  @media (min-width: @desktop-width) {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 .form__order-button {

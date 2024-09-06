@@ -7,6 +7,11 @@
   padding-top: 48px;
   padding-bottom: 48px;
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding-top: 40px;
+  }
 }
 
 .hero__title {
@@ -16,6 +21,11 @@
   font-size: 48px;
   line-height: 48px;
   color: #ffffff;
+
+  @media (min-width: @desktop-width) {
+    font-size: 64px;
+    line-height: 64px;
+  }
 }
 
 .hero__breadcrumbs {
@@ -25,4 +35,3 @@
     display: block;
   }
 }
-
