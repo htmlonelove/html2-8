@@ -1,0 +1,43 @@
+.breadcrumbs {
+  margin-bottom: 8px;
+}
+
+.breadcrumbs__list {
+  @include mp0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 33px;
+  justify-content: center;
+}
+
+.breadcrumbs__link {
+  color: $primary-color;
+  text-decoration: none;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 17px;
+  cursor: default;
+
+  &[href] {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+.breadcrumbs__item {
+  position: relative;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 16px;
+  background-color: #ffffff;
+  opacity: 0.4;
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
