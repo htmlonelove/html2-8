@@ -24,6 +24,11 @@
   .font(18px, 21px, #5F5F5F);
   letter-spacing: 0.02em;
   margin: 0 0 30px -2px;
+  .transition(opacity);
+
+  &:hover {
+    opacity: 0.5;
+  }
   @media (min-width: @tablet-width) {
     .font-size-change(20px, 24px);
     margin: 0 -8px 57px 0;
@@ -74,7 +79,19 @@
   .font(40px, 36px, @color-474442, 400);
   letter-spacing: -0.02em;
   z-index: 2;
-  @media (min-width: @tablet-width) {
+  .two-properties-transition(background-color, color);
+
+  &:hover {
+    background-color: @color-474442;
+    color: @color-white;
+  }
+
+  &:active {
+    background-color: @color-5f5f5f;
+    color: @color-acacac;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 178px;
     height: 178px;
   }
