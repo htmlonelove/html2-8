@@ -7,12 +7,16 @@
 .form__list {
   .list__reset;
   display: grid;
-  gap: 32px;
 }
 
 .form__item {
+  padding: 32px 0;
   display: flex;
   flex-direction: column;
+}
+
+.form__item:not(:last-child) {
+  border-bottom: 1px solid #e0deda;
 }
 
 .form__content {
@@ -29,8 +33,7 @@
 }
 
 .form__image {
-  width: 52px;
-  height: 42px;
+  padding-top: 16px;
   object-fit: cover;
 }
 
@@ -82,4 +85,65 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+.form__product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form__info-names {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  text-align: left;
+}
+
+.form__info-names .form__info-text--hide {
+  display: none;
+}
+
+.form__info-text {
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #5f5f5f;
+}
+
+.form__info-prices {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 45px;
+  text-align: left;
+}
+
+.form__field,
+.form__info-price {
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #474442;
+}
+
+.form__field {
+  width: 56px;
+  padding: 9px 16px;
+  border: none;
+  outline: 1px solid #e0deda;
+}
+
+.form__info-price {
+  margin: 0;
+  align-self: center;
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #474442;
+}
+
+.form__info-price-value {
+  color: #acacac;
 }
