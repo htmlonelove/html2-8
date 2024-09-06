@@ -3,6 +3,7 @@
 }
 
 .hero__wrapper {
+  .wrapper__size;
   padding-top: 48px;
   padding-bottom: 48px;
   text-align: center;
@@ -19,4 +20,9 @@
 
 .hero__breadcrumbs {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
+

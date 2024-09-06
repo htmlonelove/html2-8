@@ -1,1 +1,36 @@
-//comments
+.breadcrumbs {
+  @media (min-width: @desktop-width) {
+    .list__reset;
+    display: flex;
+    justify-content: center;
+    gap: 33px;
+  }
+}
+
+.breadcrumbs__item {
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    position: relative;
+  }
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 16px;
+    left: 70px;
+    background-color: #ffffff;
+    opacity: 0.4;
+  }
+}
+
+.breadcrumbs__link {
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
