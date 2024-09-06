@@ -1,26 +1,85 @@
-.instagram{
+.instagram {
   text-align: center;
   background-color: @background-color-f5f4f2;
-  padding:  48px 0;
-}
-.instagram__title{
   font-family: @font-family-forum;
-  .font(48px, 48px,#474442);
-}
-.instagram__link{
-  display: block;
-  font-family: @font-family-walsheim-pro;
-  .font(20px, 24px,#5F5F5F);
-  margin-bottom: 29px;
+  padding: 49px 0;
 }
 
-.instagram__button{
+.instagram__title {
+  .font(32px, 35px, #474442);
+  letter-spacing: -0.02em;
+  margin: 0 0 4px -4px;
+  @media (min-width: @tablet-width) {
+    .font-size-change(48px, 48px);
+  }
+}
+
+.instagram__link {
+  display: block;
+  font-family: @font-family-walsheim-pro;
+  .font(18px, 21px, #5F5F5F);
+  letter-spacing: 0.02em;
+  margin: 0 0 30px -2px;
+  @media (min-width: @tablet-width) {
+    .font-size-change(20px, 24px);
+    margin-bottom: 57px;
+  }
+}
+
+.instagram__slider {
+  height: 230px;
+  margin-bottom: 24px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+}
+
+.instagram__button-wrapper {
+  position: relative;
+  min-height: 160px;
+  @media (min-width: @tablet-width) {
+    min-height: 178px;;
+  }
+}
+
+.instagram__button-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 1px;
+  background-color: @color-e0deda;
+  width: 100%;
+  z-index: 1;
+}
+
+.instagram__button {
   .button-reset();
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 160px;
   height: 160px;
+  .flex(center, center, column);
   background-color: @color-white;
   border-radius: 50%;
   font-family: @font-family-forum;
-  .font(40px, 36px,#474442)
+  .font(40px, 36px, @color-474442, 400);
+  letter-spacing: -0.02em;
+  z-index: 2;
+  @media (min-width: @tablet-width) {
+    width: 178px;
+    height: 178px;
+  }
+}
+
+.instagram__button-text {
+  font-family: @font-family-walsheim-pro;
+  .font(12px, 14px, 500);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 

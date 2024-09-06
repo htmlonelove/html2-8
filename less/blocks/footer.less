@@ -1,11 +1,12 @@
 .footer {
   background-color: @color-white;
-  padding: 80px 48px 49px;
+  padding: 0 20px 48px;
   font-family: @font-family-walsheim-pro;
   .font(14px, 15px, @color-474442);
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    padding: 80px 48px 49px;
     background-color: @background-color-f5f4f2;
   }
 }
@@ -13,18 +14,21 @@
 .footer__container {
   padding: 48px 0 20px;
   background-color: @color-white;
+  max-width: @content-max-width;
+  margin: 0 auto;
 }
 
 .footer__top {
-  padding: 0 48px 32px;
+  padding: 0 20px 32px;
   border-bottom: 1px solid @color-e0deda;
   @media (min-width: @tablet-width) {
-    .flex(space-between,stretch);
+    .flex(space-between, stretch);
+    padding: 0 48px 32px;
   }
 }
 
 .footer__middle {
-  padding: 32px 32px 32px;
+  padding: 31px 28px 32px;
 
   span {
     display: block;
@@ -32,22 +36,24 @@
     .font(14px, 15px, @color-474442);
     margin-bottom: 15px;
   }
-  @media (min-width: @tablet-width) {
+
+  @media (min-width: @desktop-width) {
     text-align: left;
   }
 }
 
 .footer__bottom {
-  padding: 0 32px 0;
+  padding: 0 22px 0;
   @media (min-width: @tablet-width) {
     .flex(space-between, center);
   }
 }
 
 .footer__logo {
-  margin-bottom: 32px;
+  display: block;
+  margin-bottom: 30px;
   flex-shrink: 1;
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin-bottom: 0;
     margin-right: 44px;
   }
@@ -59,7 +65,7 @@
   p {
     font-family: @font-family-walsheim-pro;
     .font(16px, 19px, @color-474442, 700);
-    margin-bottom: 10px;
+    margin: 0 0 9px;
   }
 
   a {
@@ -72,30 +78,29 @@
   a:not(:last-child) {
     margin-bottom: 10px;
   }
+
   @media (min-width: @tablet-width) {
-    .flex(justify-content,stretch);
+    .flex(justify-content, stretch);
     text-align: left;
   }
 }
 
 .footer__nav-item:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
     margin-right: 64px;
-    }
   }
+}
 
 .footer__socials {
   .list-reset();
-  .flex(center, center);
+  .flex(space-between, center);
   flex-wrap: wrap;
   gap: 12px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 264px;
   @media (min-width: @tablet-width) {
-    margin:0;
+    margin: 0;
     justify-content: flex-start;
   }
 }
@@ -109,8 +114,8 @@
 
   a {
     display: block;
-    width: 17px;
-    height: 15px;
+    width: 19px;
+    height: 19px;
   }
 
   &--telegram {
@@ -151,7 +156,7 @@
 
 .footer__rights {
   max-width: 100%;
-  margin-bottom: 24px;
+  margin: 0 0 24px;
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }

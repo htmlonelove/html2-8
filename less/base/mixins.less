@@ -1,6 +1,6 @@
 .flex(@justify:flex-start, @align:stretch, @direction:row) {
   display: flex;
-  flex-direction:@direction;
+  flex-direction: @direction;
   justify-content: @justify;
   align-items: @align;
 }
@@ -21,6 +21,29 @@
   line-height: @line;
   color: @color;
   font-weight: @weight;
+}
+
+.font-size-change(@size, @line) {
+  font-size: @size;
+  line-height: @line;
+}
+
+.transition(@property) {
+  transition: @property 0.3s cubic-bezier(.45, .05, .55 .95);
+}
+
+.two-properties-transition(@property1,@property2) {
+  transition: @property1 0.3s cubic-bezier(.45, .05, .55 .95), @property2 0.3s cubic-bezier(.45, .05, .55 .95);
+}
+
+.active-input-style(){
+  color: @color-474442;
+  border-bottom: 1px solid @color-474442;
+}
+
+.error-input-style(){
+  color: @color-474442;
+  border-bottom: 1px solid @color-error-e07c66;
 }
 
 .iframe-reset() {
