@@ -15,19 +15,20 @@
   display: flex;
   flex-direction: column;
 }
-  .form__item:not(:last-child)::after,
-  .form__item:not(:last-child)::before  {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 800%;
-    height: 1px;
-    background: #ebebeb;
-    bottom: 0;
-    right: 0;
+
+.form__item:not(:last-child)::after,
+.form__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 800%;
+  height: 1px;
+  background: #ebebeb;
+  bottom: 0;
+  right: 0;
 }
 
-.form__item:not(:last-child)::after{
+.form__item:not(:last-child)::after {
   left: 0;
 }
 
@@ -203,6 +204,7 @@
   color: #474442;
   background-color: transparent;
 }
+
 .form__order {
   padding-top: 24px;
 }
