@@ -6,9 +6,6 @@
   padding: 0 12px;
   background: @color-white linear-gradient(180deg, @color-white 47%, @background-color-f5f4f2 47% 100%) no-repeat top;
   background-size: cover;
-  @media (min-width: @tablet-width) {
-    .font-size-change(16px, 20px);
-  }
 }
 
 .subscribe__container {
@@ -18,8 +15,8 @@
   max-width: 982px;
   margin: 0 auto;
   padding: 24px 32px 23px;
-  @media (min-width: @tablet-width) {
-    padding: 48px 100px;
+  @media (min-width: @desktop-width) {
+    padding: 48px 99px;
   }
 }
 
@@ -32,15 +29,15 @@
   padding: 0;
   @media (min-width: @tablet-width) {
     .font-size-change(48px, 48px);
+    margin-bottom: 8px;
   }
 }
 
 .subscribe__form {
   margin-bottom: 24px;
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 24px;
+    .flex(flex-start, center);
+    margin-bottom: 33px;
   }
 }
 
@@ -48,36 +45,67 @@
   font-family: @font-family-walsheim-pro;
   .font(16px, 22px, @color-5f5f5f);
   padding: 18px 26px 16px 0;
+  letter-spacing: -0.02em;
   border: none;
   border-bottom: 1px solid #000000;
-  width: 98%;
+  width: 100%;
+  @media (min-width: @desktop-width) {
+    padding-bottom: 14px;
+  }
 }
 
 .subscribe__description {
   margin: 0 0 15px;
-  @media (min-width: @tablet-width) {
-    margin-bottom: 32px;
+  max-width: 100%;
+  @media (min-width: @desktop-width) {
+    margin: 0 auto 40px;
+  }
+
+  br {
+    display: none;
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.subscribe__input{
+  @media (min-width: @desktop-width) {
+    padding-right: 40px;
   }
 }
 
 .subscribe__select {
   appearance: none;
-  background: ~'url("img/stack.svg#select")' no-repeat top 53% right 2px;
+  background: ~'url("img/stack.svg#select")' no-repeat top 54% right 2px;
   background-size: 14px 9px;
-  padding-bottom: 15px;
+  @media (min-width: @desktop-width) {
+    padding-right: 130px;
+    background: ~'url("img/stack.svg#select")' no-repeat top 54% right -2px;
+    background-size: 14px 9px;
+  }
 }
 
 .subscribe__label {
   position: relative;
   display: block;
+  @media (min-width: @desktop-width) {
+    margin-right: 26px;
+  }
 }
 
 .subscribe__label:not(:last-of-type) {
   margin-bottom: 8px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
-.subscribe__label:last-of-type{
+.subscribe__label:last-of-type {
   margin-bottom: 32px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .subscribe__error {
@@ -111,7 +139,7 @@
   max-width: 100%;
   .two-properties-transition(background-color, color);
   @media (min-width: @desktop-width) {
-    max-width: 294px;
+    padding: 17px 98px;
   }
 
   &:hover {

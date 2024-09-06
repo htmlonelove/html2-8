@@ -23,7 +23,7 @@
 <section class="subscribe">
   <div class="subscribe__container">
     <h2 class="subscribe__title">Подписывайтесь на наши новости</h2>
-    <p class="subscribe__description">Подписывайтесь на нашу ленту и всегда будете в курсе новых поступлений и&nbsp;скидок. Без спама, раз в неделю.</p>
+    <p class="subscribe__description">Подписывайтесь на нашу ленту и всегда будете в курсе новых поступлений и&nbsp;скидок. <br/>Без спама, раз в неделю.</p>
     <form action="https://echo.htmlacademy.ru/" class="subscribe__form" method="post">
       <label class="subscribe__label">
         <input type="email" class="subscribe__input" placeholder="Ваш e-mail"/>
@@ -168,13 +168,21 @@
   <div class="footer__container">
     <div class="footer__top">
       <a href="/" class="footer__logo">
-        <img
-          class="footer__logo-image"
-          src="img/logo/footer-logo.svg"
-          alt="Логотип Resale Ward"
-          width="240"
-          height="87"
-        />
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="img/logo/footer-logo.svg"
+            width="236"
+            height="82"
+          />
+          <img
+            class="footer__logo-image"
+            src="img/logo/footer-logo.svg"
+            alt="Логотип Resale Ward"
+            width="240"
+            height="87"
+          />
+        </picture>
       </a>
       <ul class="footer__nav">
         <li class="footer__nav-item">
