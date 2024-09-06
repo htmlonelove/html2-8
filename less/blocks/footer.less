@@ -93,8 +93,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    .flex(justify-content, stretch);
-    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 63%;
     text-align: left;
   }
 }
@@ -103,13 +106,6 @@
   margin-bottom: 25px;
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    margin-right: 100px;
-  }
-}
-
-.footer__nav-item:nth-child(3n+2) {
-  @media (min-width: @desktop-width) {
-    margin-right: 88px;
   }
 }
 
