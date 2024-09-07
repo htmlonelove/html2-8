@@ -21,9 +21,13 @@
         </div>
       </section>
       <section class="cart">
-        <div class="cart__wrapper">
+        <div class="cart__wrapper cart__wrapper--empty-cart">
+          <h2 class="visually-hidden"> Пустая корзина</h2>
           <div class="cart__image">
-            <svg></svg>
+            <span class="visually-hidden"> Иконка пакетов с бирками</span>
+            <svg class="cart__icon" width="87" height="106" fill="#e0deda">
+              <use xlink:href="img/sprite.svg#cart-icon"></use>
+            </svg>
           </div>
           <p class="cart__info"> В корзине пока ничего нет :&#10098;</p>
           <p class="cart__description"> Можете начать с главной страницы или выбрать себе что-нибудь в нашем каталоге</p>
