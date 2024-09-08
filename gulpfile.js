@@ -65,8 +65,8 @@ export const moveSprite = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-const copyImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png,svg}')
+const copyMedia = () => {
+  return gulp.src('source/img/**/*.{jpg,png,svg,mp4}')
     .pipe(gulp.dest('build/img'))
 }
 
@@ -142,7 +142,7 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copy,
-  copyImages,
+  copyMedia,
   gulp.parallel(
     html,
     styles,

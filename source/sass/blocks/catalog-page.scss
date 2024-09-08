@@ -17,25 +17,27 @@
 }
 
 .catalog-page__header-wrapper {
-  padding: 20px 48px 20px 48px;
+  padding: 20px 48px 53px;
 
   @media (min-width: $desktop-width) {
-    padding: 20px 20px 48px 20px;
+    padding: 20px 20px 53px;
   }
 }
 
 .catalog-page__title {
   @include mp0;
-  margin-bottom: 16px;
+  margin-bottom: 21px;
   font-family: $secondary-font;
   font-size: 48px;
+  line-height: 48px;
   font-weight: 400;
   text-align: center;
+  letter-spacing: -0.02em;
 
   @media (min-width: $desktop-width) {
     font-size: 64px;
     letter-spacing: -0.02em;
-    margin-bottom: 8px;
+    margin-bottom: 22px;
   }
 }
 

@@ -29,7 +29,7 @@
             <li class="breadcrumbs__item">
               <a class="breadcrumbs__link">Louis Vuitton</a>
             </li>
-          </щ>
+          </ol>
         </div>
 
         <h1 class="catalog-page__title">Клатчи Louis Vuitton</h1>
@@ -40,7 +40,7 @@
     <section class="catalog">
       <div class="container catalog__wrapper">
         <div class="catalog__buttons">
-          <button class="catalog__button" type="button">Фильтр</button>
+          <button class="catalog__button catalog__button--filters" type="button">Фильтр</button>
 
           <ul class="catalog__active-filters">
             <li class="catalog__active-filter">
@@ -52,8 +52,8 @@
           </ul>
 
           <div class="catalog__select-group custom-select">
-            <button class="catalog__button catalog__button-sort" type="button">Сортировать</button>
-            <ul class="custom-select__list custom-select__list--opened">
+            <button class="catalog__button catalog__button-sort" type="button"><span class="catalog__button-sort-text">Сортировать</span></button>
+            <ul class="custom-select__list"> <!-- Class "custom-select__list--opened" makes the list visible -->
               <li class="custom-select__item">По возрастанию цены</li>
               <li class="custom-select__item">По убыванию цены</li>
               <li class="custom-select__item">Популярные</li>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="catalog__main-content">
-          <div class="catalog__filters catalog__filters--is-opened"> <!-- Add/remove "catalog__filters--is-opened" class to hide/show the filters tab -->
+          <div class="catalog__filters"> <!-- Add/remove "catalog__filters--is-opened" class to hide/show the filters tab -->
             <form class="filters" action="https://echo.htmlacademy.ru/" method="post">
               <!-- REPLACE THE ACTION WITH AN APPROPRIATE ADDRESS -->
               <h2 class="visually-hidden">Фильтры товаров</h2>
@@ -130,6 +130,12 @@
                       value="Hermes">
                     <span class="custom-checkbox__checkbox"></span>
                     <span class="custom-checkbox__label">Hermes</span>
+                  </label>
+                  <label class="filter__checkbox-wrapper custom-checkbox">
+                    <input class="custom-checkbox__actual-checkbox visually-hidden" type="checkbox" name="brand"
+                      value="Dior">
+                    <span class="custom-checkbox__checkbox"></span>
+                    <span class="custom-checkbox__label">Dior</span>
                   </label>
                 </fieldset>
               </details>
@@ -283,7 +289,10 @@
                 </fieldset>
               </details>
 
-              <button class="filters__button-clear button" type="submit">Очистить</button>
+              <button class="filters__button-clear button" type="button">Очистить<span class="button__icon button__icon--reset"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.7499 10L0.5 8.7501L4.24973 5.00036L0.500133 1.25076L1.75003 0.000861715L5.49917 3.75L9.24916 0L10.4991 1.2499L6.74946 4.9995L10.4992 8.74924L9.2493 9.99914L5.50013 6.24997L1.7499 10Z" fill="white"/>
+                </svg>
+                </span></button>
 
             </form>
           </div>
@@ -377,7 +386,9 @@
             <div class="catalog__item product-card">
               <a href="#" class="product-card__link">
                 <div class="product-card__thumbnails">
-                  <img src="./img/catalog-7.jpg" alt="" class="product-card__image product-card__image--is-active">
+                  <video class="product-card__image" autoplay muted loop>
+                    <source src="./img/catalog-9.mp4" type="video/mp4" />
+                  </video>
                   <img src="./img/catalog-8.jpg" alt="" class="product-card__image">
                 </div>
                 <div class="product-card__text-wrapper">
@@ -417,7 +428,7 @@
             </div>
 
             <div class="catalog__item product-card product-card--show-more">
-              <button class="product-card__show-more-button" type="button">Показать больше</button>
+              <button class="product-card__show-more-button" type="button"><span class="product-card__show-more-text">Показать больше</span></button>
             </div>
 
           </div>
@@ -449,6 +460,8 @@
 
     </section>
   </main>
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

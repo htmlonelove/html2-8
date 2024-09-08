@@ -6,7 +6,7 @@
 }
 
 .catalog__wrapper {
-  padding: 24px 20px 48px 20px;
+  padding: 34px 19px 48px 21px;
 
   @media (min-width: $desktop-width) {
     padding: 80px 48px 48px 48px;
@@ -40,13 +40,15 @@
 .catalog__buttons {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 23px;
+  align-items: center;
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 278px 1fr 278px;
     gap: 24px;
     justify-items: start;
+    margin-bottom: 24px;
   }
 }
 
@@ -81,11 +83,7 @@
     background-image: url('../../img/icons/arrow.svg');
     top: 50%;
     transform: translateY(-50%);
-    right: -19px;
-  }
-
-  &:last-of-type {
-    margin-right: 19px;
+    right: -15px;
   }
 
   @media (min-width: $desktop-width) {
@@ -93,17 +91,23 @@
   }
 }
 
+.catalog__button--filters::after {
+  transform: translateY(-50%) rotate(-90deg);
+  right: -19px;
+}
+
 .catalog__select-group {
-  width: 100%;
+  width: 250px;
+  justify-self: end;
 }
 
 .catalog__button-sort {
-  width: 100%;
-  margin-right: 89px;
+  padding-left: 24px;
+}
 
-  &::after {
-    right: 0;
-  }
+.catalog__button-sort-text {
+  display: block;
+  margin-right: 89px;
 }
 
 .catalog__active-filters {
@@ -121,7 +125,7 @@
 
 .catalog__active-filter-button {
   border: 1px solid $primary-border-color;
-  padding: 9.5px 36px 9.5px 16px;
+  padding: 9.5px 46px 10px 16px;
   background-color: $primary-color;
   font-family: $primary-font;
   font-size: 14px;
@@ -140,7 +144,7 @@
     height: 10px;
     top: 50%;
     transform: translateY(-50%);
-    right: 16px;
+    right: 18px;
   }
 
   &:hover,
@@ -156,7 +160,7 @@
 .catalog__items-wrapper {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 16px;
+  row-gap: 14px;
   column-gap: 7px;
   margin-bottom: 40px;
   
