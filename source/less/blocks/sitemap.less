@@ -1,0 +1,63 @@
+.sitemap__wrapper {
+  .wrapper__size;
+  padding-top: 16px;
+  padding-bottom: 48px;
+  display: grid;
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding-top: 48px;
+  }
+}
+
+.sitemap__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #474442;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.sitemap__list {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.sitemap__item {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.sitemap__link {
+  margin: 0;
+  padding: 5px 0 5px 0;
+  font-family: "GTWalsheimPro", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #474442;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95), opacity 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.sitemap__link:hover,
+.sitemap__link:focus {
+  color: #acacac;
+}
+
+.sitemap__link:active {
+  opacity: 0.5;
+}
