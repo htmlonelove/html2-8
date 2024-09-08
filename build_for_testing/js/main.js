@@ -1,0 +1,1 @@
+const resetFiltersButton=document.querySelector(".filters__button-clear"),filterCheckboxesList=document.querySelectorAll(".filter__checkbox-wrapper .custom-checkbox__actual-checkbox"),filterCheckboxesArray=[...filterCheckboxesList];resetFiltersButton.addEventListener("click",(e=>{filterCheckboxesArray.forEach((e=>{e.checked=!1}))}));
