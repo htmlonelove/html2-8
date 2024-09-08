@@ -1,7 +1,16 @@
-.swiper-button-prev {
-  display: none;
-}
-
+.swiper-button-prev,
 .swiper-button-next {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    background-position: 50%;
+    border: 1px solid #e0deda;
+    border-radius: 50%;
+    z-index: 5;
+  }
 }
