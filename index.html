@@ -14,12 +14,17 @@
     <section class="product-card">
       <div class="product-card__wrapper container">
         <div class="product-card__slider swiper">
-          <button class="swiper-button-prev product-card__slider-buton product-card__slider-buton--prev button" type="button">
+          <button class="swiper-button-prev product-card__slider-buton product-card__slider-buton--prev arrow-button" type="button">
             <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.708 4.105 4.312 10.5l6.396 6.395M5.077 10.5H19.03" stroke="#474442" stroke-width="1.4" />
             </svg>
           </button>
           <div class="product-card__chosen-slide">
+            <button class="product-card__back-button arrow-button">
+              <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.708 4.105 4.312 10.5l6.396 6.395M5.077 10.5H19.03" stroke="#474442" stroke-width="1.4" />
+              </svg>
+            </button>
             <img src="img/hermes-ankle-boots-1-big-mobile.jpg" width="375" height="360" alt="#">
           </div>
           <ol class="swiper-wrapper product-card__slide-list">
@@ -42,7 +47,7 @@
               <img src="img/hermes-ankle-boots-6-mobile.jpg" width="90" height="90" alt="#">
             </li>
           </ol>
-          <button class="swiper-button-next product-card__slider-buton product-card__slider-buton--next button" type="button">
+          <button class="swiper-button-next product-card__slider-buton product-card__slider-buton--next arrow-button" type="button">
             <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="m11.292 4.105 6.396 6.395-6.396 6.395M16.923 10.5H2.97" stroke="#474442" stroke-width="1.4" />
             </svg>
@@ -103,60 +108,112 @@
         </div>
       </div>
     </section>
-    <section class="similar-products">
-      <div class="similar-products__wrapper container">
-        <div class="similar-products__button-wrapper">
-          <button type="button" class="button similar-products__tab-button is-active">Вы уже смотрели</button>
-          <button type="button" class=" button similar-products__tab-button not-active">Похожие товары</button>
+    <section class="product-tabs">
+      <div class="product-tabs__wrapper container">
+        <div class="product-tabs__button-wrapper">
+          <button type="button" class="button product-tabs__tab-button is-active">Вы уже смотрели</button>
+          <button type="button" class=" button product-tabs__tab-button not-active">Похожие товары</button>
         </div>
-        <div class="similar-products__slider swiper">
-          <button class="swiper-button-prev similar-products__slider-buton similar-products__slider-buton--prev button" type="button">
-            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.708 4.105 4.312 10.5l6.396 6.395M5.077 10.5H19.03" stroke="#474442" stroke-width="1.4" />
-            </svg>
-          </button>
-          <ol class="swiper-wrapper similar-products__list">
-            <li class="swiper-slide similar-products__item">
-              <div class="similar-products__item-image-wrapper">
-                <img class="similar-products__item-image" src="#" alt="#">
-              </div>
-              <h3 class="similar-products__item-title">GUCCI</h3>
-              <span class="similar-products__item-description">Boats dark and red</span>
-              <span class="similar-products__item-price">720 900 ₽</span>
-            </li>
-            <li class="swiper-slide similar-products__item">
-              <div class="similar-products__item-image-wrapper">
-                <img class="similar-products__item-image" src="#" alt="#">
-              </div>
-              <h3 class="similar-products__item-title">GUCCI</h3>
-              <span class="similar-products__item-description">Boats dark and red</span>
-              <span class="similar-products__item-price">113 900 ₽</span>
-            </li>
-            <li class="swiper-slide similar-products__item">
-              <div class="similar-products__item-image-wrapper">
-                <img class="similar-products__item-image" src="#" alt="#">
-              </div>
-              <h3 class="similar-products__item-title">Dior</h3>
-              <span class="similar-products__item-description">Boats dark and red</span>
-              <span class="similar-products__item-price">720 900 ₽</span>
-            </li>
-            <li class="swiper-slide similar-products__item">
-              <div class="similar-products__item-image-wrapper">
-                <img class="similar-products__item-image" src="#" alt="#">
-              </div>
-              <h3 class="similar-products__item-title">Dior</h3>
-              <span class="similar-products__item-description">Boats dark and red</span>
-              <span class="similar-products__item-price">720 900 ₽</span>
-            </li>
-          </ol>
-          <button class="swiper-button-next similar-products__slider-buton similar-products__slider-buton--next button" type="button">
-            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m11.292 4.105 6.396 6.395-6.396 6.395M16.923 10.5H2.97" stroke="#474442" stroke-width="1.4" />
-            </svg>
-          </button>
+        <div class="product-tabs__content">
+          <div class="product-tabs__slider is-active swiper">
+            <button class="swiper-button-prev product-tabs__slider-buton product-tabs__slider-buton--prev arrow-button"
+              type="button">
+              <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.708 4.105 4.312 10.5l6.396 6.395M5.077 10.5H19.03" stroke="#474442" stroke-width="1.4" />
+              </svg>
+            </button>
+            <ol class="swiper-wrapper product-tabs__list">
+              <li class="swiper-slide product-tabs__item">
+                <div class="product-tabs__item-image-wrapper">
+                  <img class="product-tabs__item-image" src="img/similar-catalog/similar-product-1.png" alt="#">
+                </div>
+                <h3 class="product-tabs__item-title">GUCCI</h3>
+                <span class="product-tabs__item-description">Boats dark and red</span>
+                <span class="product-tabs__item-price">720 900 ₽</span>
+              </li>
+              <li class="swiper-slide product-tabs__item">
+                <div class="product-tabs__item-image-wrapper">
+                  <img class="product-tabs__item-image" src="img/similar-catalog/similar-product-2.png" alt="#">
+                </div>
+                <h3 class="product-tabs__item-title">GUCCI</h3>
+                <span class="product-tabs__item-description">Boats dark and red</span>
+                <span class="product-tabs__item-price">113 900 ₽</span>
+              </li>
+              <li class="swiper-slide product-tabs__item">
+                <div class="product-tabs__item-image-wrapper">
+                  <img class="product-tabs__item-image" src="img/similar-catalog/similar-product-3.png" alt="#">
+                </div>
+                <h3 class="product-tabs__item-title">Dior</h3>
+                <span class="product-tabs__item-description">Boats dark and red</span>
+                <span class="product-tabs__item-price">720 900 ₽</span>
+              </li>
+              <li class="swiper-slide product-tabs__item">
+                <div class="product-tabs__item-image-wrapper">
+                  <img class="product-tabs__item-image" src="img/similar-catalog/similar-product-4.png" alt="#">
+                </div>
+                <h3 class="product-tabs__item-title">Dior</h3>
+                <span class="product-tabs__item-description">Boats dark and red</span>
+                <span class="product-tabs__item-price">720 900 ₽</span>
+              </li>
+            </ol>
+            <button class="swiper-button-next product-tabs__slider-buton product-tabs__slider-buton--next arrow-button"
+              type="button">
+              <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m11.292 4.105 6.396 6.395-6.396 6.395M16.923 10.5H2.97" stroke="#474442" stroke-width="1.4" />
+              </svg>
+            </button>
+          </div>
+          <div class="product-tabs__slider swiper">
+            <button class="swiper-button-prev product-tabs__slider-buton product-tabs__slider-buton--prev arrow-button"
+              type="button">
+              <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.708 4.105 4.312 10.5l6.396 6.395M5.077 10.5H19.03" stroke="#474442" stroke-width="1.4" />
+              </svg>
+            </button>
+            <ol class="swiper-wrapper product-tabs__list">
+              <li class="swiper-slide product-tabs__item">
+                <div class="product-tabs__item-image-wrapper">
+                  <img class="product-tabs__item-image" src="img/viewed-catalog/viewed-product-1.png" alt="#">
+                </div>
+                <h3 class="product-tabs__item-title">GUCCI</h3>
+                <span class="product-tabs__item-description">Boats dark and red</span>
+                <span class="product-tabs__item-price">720 900 ₽</span>
+              </li>
+              <li class="swiper-slide product-tabs__item">
+                <div class="product-tabs__item-image-wrapper">
+                  <img class="product-tabs__item-image" src="img/viewed-catalog/viewed-product-2.png" alt="#">
+                </div>
+                <h3 class="product-tabs__item-title">GUCCI</h3>
+                <span class="product-tabs__item-description">Boats dark and red</span>
+                <span class="product-tabs__item-price">720 900 ₽</span>
+              </li>
+              <li class="swiper-slide product-tabs__item">
+                <div class="product-tabs__item-image-wrapper">
+                  <img class="product-tabs__item-image" src="img/viewed-catalog/viewed-product-3.png" alt="#">
+                </div>
+                <h3 class="product-tabs__item-title">GUCCI</h3>
+                <span class="product-tabs__item-description">Boats dark and red</span>
+                <span class="product-tabs__item-price">720 900 ₽</span>
+              </li>
+              <li class="swiper-slide product-tabs__item">
+                <div class="product-tabs__item-image-wrapper">
+                  <img class="product-tabs__item-image" src="img/viewed-catalog/viewed-product-4.png" alt="#">
+                </div>
+                <h3 class="product-tabs__item-title">GUCCI</h3>
+                <span class="product-tabs__item-description">Boats dark and red</span>
+                <span class="product-tabs__item-price">720 900 ₽</span>
+              </li>
+            </ol>
+            <button class="swiper-button-next product-tabs__slider-buton product-tabs__slider-buton--next arrow-button"
+              type="button">
+              <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m11.292 4.105 6.396 6.395-6.396 6.395M16.923 10.5H2.97" stroke="#474442" stroke-width="1.4" />
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="button-wrapper">
-          <button class="button button__to-catalog" type="button">
+          <button class="button to-catalog-button" type="button">
             <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.708 4.105 4.312 10.5l6.396 6.395M5.077 10.5H19.03" stroke="#474442" stroke-width="1.4" />
             </svg>

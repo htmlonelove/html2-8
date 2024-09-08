@@ -1,0 +1,27 @@
+.arrow-button {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  background-position: 50%;
+  border: 1px solid #e0deda;
+  border-radius: 50%;
+  z-index: 5;
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: @basic-function;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f5f4f2;
+    border-color: #474442;
+  }
+
+  &:focus {
+    border-color: #474442;
+  }
+
+  &:active {
+    background-color: #f5f4f2;
+    border-color: #e0deda;
+  }
+}
