@@ -13,7 +13,7 @@
   position: relative;
   padding: 32px 0;
   display: grid;
-  grid-template-columns: 80px 126px 111px auto;
+  grid-template-columns: 80px 96px 111px 48px;
   grid-template-rows: repeat(3, auto);
   row-gap: 10px;
 
@@ -31,7 +31,7 @@
   content: "";
   position: absolute;
   display: block;
-  width: 800%;
+  width: 400%;
   height: 1px;
   background: #ebebeb;
   bottom: 0;
@@ -68,24 +68,9 @@
   }
 }
 
-.form__image img {
+.form__image {
   display: block;
   object-fit: cover;
-}
-
-.form__image--bag {
-  width: 52px;
-  height: 42px;
-}
-
-.form__image--white-shoes {
-  width: 61px;
-  height: 45px;
-}
-
-.form__image--black-shoes {
-  width: 96px;
-  height: 87px;
 }
 
 .form__product-name {
@@ -196,7 +181,7 @@
   grid-column: 1/5;
   grid-row: 2/3;
   display: grid;
-  grid-template-columns: 80px 106px auto;
+  grid-template-columns: 80px 106px 109px;
   gap: 20px;
   text-align: left;
 
@@ -229,12 +214,13 @@
   grid-column: 1/5;
   grid-row: 3/4;
   display: grid;
-  grid-template-columns: 80px 106px auto;
+  grid-template-columns: 80px 106px 109px;
   gap: 20px;
   text-align: left;
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 129px 100px auto;
+    gap: 45px;
     grid-column: 3/4;
     grid-row: 1/2;
   }
@@ -282,8 +268,8 @@
 //--promo
 .form__group--promo {
   position: relative;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: flex;
 
   &::after,
@@ -317,7 +303,7 @@
 .form__group--promo .form__field {
   margin-right: 16px;
   padding: 16px;
-  width: 229px;
+  width: 260px;
   font-size: 14px;
   line-height: 16px;
   color: #474442;
@@ -341,6 +327,7 @@
 }
 
 .form__promo-button {
+  padding: 0;
   font-size: 14px;
   line-height: 16px;
   border: none;
@@ -370,7 +357,7 @@
 }
 
 .form__order {
-  padding-top: 24px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -398,6 +385,7 @@
   @media (min-width: @desktop-width) {
     font-size: 32px;
     line-height: 38px;
+    margin-bottom: 14px;
   }
 }
 

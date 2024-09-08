@@ -7,17 +7,17 @@
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    padding: 145px 48px 108px 48px;
+    padding: 140px 48px 108px 48px;
   }
 }
 
 //empty cart
 .cart__wrapper--empty-cart {
-  padding-top: 48px;
+  padding-top: 80px;
 }
 
 .cart__image {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 48px;
@@ -40,6 +40,7 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 32px;
+  letter-spacing: -0.02em;
   color: #474442;
   max-width: 283px;
   justify-self: center;
@@ -52,7 +53,8 @@
 }
 
 .cart__description {
-  margin: 0 0 32px 0;
+  margin: 0 0 34px 0;
+  padding: 0 15px;
   font-family: "GTWalsheimPro", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -81,8 +83,12 @@
 }
 
 .cart__button {
+  width: 100%;
   padding: 18px 0;
-  width: 220px;
+
+  @media (min-width: @desktop-width) {
+    width: 220px;
+  }
 }
 
 .cart__button--light {
