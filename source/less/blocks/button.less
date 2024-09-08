@@ -9,4 +9,18 @@
   background-color: #474442;
   border: none;
   cursor: pointer;
+  transition: color 0.3s cubic-bezier(.45,.05,.55,.95);
+  transition: background-color 0.3s cubic-bezier(.45,.05,.55,.95);
+  transition: opacity 0.3s cubic-bezier(.45,.05,.55,.95);
+}
+
+.button:hover,
+.button:focus {
+  background-color: #1a1716;
+  outline: none;
+}
+
+.button:active {
+  color: #acacac;
+  background-color: #5f5f5f;
 }

@@ -96,6 +96,8 @@
   width: 187px;
   text-decoration: none;
   text-align: left;
+  transition: color 0.3s cubic-bezier(.45,.05,.55,.95);
+  transition: opacity 0.3s cubic-bezier(.45,.05,.55,.95);
 
   @media (min-width: @desktop-width) {
     padding-left: 24px;
@@ -103,6 +105,14 @@
     align-self: center;
     width: 336px;
   }
+}
+
+.form__product-name:hover {
+  opacity: 0.5;
+}
+
+.form__promo-button:active {
+  color: #acacac;
 }
 
 .form__title {
@@ -171,6 +181,17 @@
       left: 35px;
     }
   }
+}
+
+.form__product-button:hover,
+.form__product-button:focus {
+  background-color: #f5f4f2;
+  outline: none;
+}
+
+.form__product-button:active {
+  background-color: #f5f4f2;
+  opacity: 0.5;
 }
 
 .form__info-names {
@@ -317,6 +338,10 @@
   color: #474442;
 }
 
+.form__group--promo .form__field:focus {
+  outline: 2px solid #474442;
+}
+
 .form__promo-button {
   font-size: 14px;
   line-height: 16px;
@@ -330,6 +355,20 @@
     padding: 15px 27px;
     text-decoration: none;
   }
+}
+
+.form__promo-button:hover {
+  opacity: 0.5;
+  background-color: transparent;
+}
+
+.form__promo-button:focus{
+  outline: auto;
+  background-color: transparent;
+}
+
+.form__promo-button:active {
+  background-color: transparent;
 }
 
 .form__order {
@@ -364,4 +403,9 @@
 .form__order-button {
   width: 280px;
   padding: 18px 0;
+}
+
+//error
+.form__error .form__field {
+  outline: 2px solid  #e07c66;
 }
