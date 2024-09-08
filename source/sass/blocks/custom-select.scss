@@ -1,0 +1,42 @@
+.custom-select {
+  position: relative;
+  display: grid;
+}
+
+.custom-select__list {
+  display: none;
+
+  &--opened {
+    display: block;
+    position: absolute;
+    z-index: 2;
+
+    @include mp0;
+    list-style-type: none;
+
+    width: 244px;
+    top: 36.5px;
+  }
+}
+
+.custom-select__item {
+  background-color: #ffffff;
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  padding: 12.5px 24px;
+  cursor: pointer;
+  transition: background-color $default-transition;
+
+  &:hover,
+  &:focus {
+    background-color: #f5f4f2;
+  }
+
+  &:active {
+    background-color: #dbd8d2;
+  }
+}

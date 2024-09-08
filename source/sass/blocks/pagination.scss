@@ -36,22 +36,9 @@
 }
 
 .pagination__item {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid $primary-border-color;
-
-  font-family: $primary-font;
-  color: $primary-text-color;
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &--is-active {
+  &--is-active .pagination__link {
     border-color: $primary-text-color;
+    cursor: default;
   }
 
   &--is-hidden {
@@ -60,8 +47,38 @@
 }
 
 .pagination__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid $primary-border-color;
+
   text-decoration: none;
+  font-family: $primary-font;
   color: $primary-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+
+  transition: opacity $default-transition;
+
+  &[href] {
+    cursor: pointer;
+  }
+
+
+
+  &[href]:hover,
+  &[href]:focus {
+    @include defaultHoverEffect;
+  }
+
+  &[href]:active {
+    @include defaultActiveEffect;
+  }
 }
 
 

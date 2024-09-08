@@ -1,0 +1,25 @@
+.button {
+  min-height: 56px;
+  padding: 18.5px;
+  background-color: $primary-text-color;
+  border: none;
+  color: $primary-text-color-contrast;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  transition: $default-transition;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #1a1716;
+  }
+
+  &:active {
+    background-color: $secondary-text-color;
+    color: $subtle-text-color;
+  }
+}

@@ -2,3 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin defaultHoverEffect {
+  opacity: 0.5;
+}
+
+@mixin defaultActiveEffect {
+  opacity: 0.3;
+}

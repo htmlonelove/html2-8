@@ -1,0 +1,12 @@
+.filters {
+  border-top: 1px solid $primary-border-color;
+  padding-top: 24px;
+}
+
+.filters__filter:last-of-type {
+  margin-bottom: 4px;
+}
+
+.filters__button-clear {
+  width: 100%;
+}

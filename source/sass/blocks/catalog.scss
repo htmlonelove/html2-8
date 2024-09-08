@@ -13,6 +13,30 @@
   }
 }
 
+.catalog__main-content {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+  }
+}
+
+.catalog__filters {
+  display: none;
+  width: 100%;
+  flex-shrink: 0;
+
+  @media (min-width: $desktop-width) {
+    width: 278px;
+  }
+
+  &--is-opened {
+    display: block;
+  }
+}
+
 .catalog__buttons {
   display: flex;
   justify-content: space-between;
@@ -36,6 +60,17 @@
   line-height: 19px;
   letter-spacing: -0.02em;
   position: relative;
+  cursor: pointer;
+  transition: opacity $default-transition;
+
+  &:hover,
+  &:focus {
+    @include defaultHoverEffect;
+  }
+
+  &:active {
+    @include defaultActiveEffect;
+  }
 
   &::after {
     content: "";
@@ -55,10 +90,19 @@
 
   @media (min-width: $desktop-width) {
     @include mp0;
+  }
+}
 
-    &:last-of-type {
-      justify-self: end;
-    }
+.catalog__select-group {
+  width: 100%;
+}
+
+.catalog__button-sort {
+  width: 100%;
+  margin-right: 89px;
+
+  &::after {
+    right: 0;
   }
 }
 
@@ -85,6 +129,8 @@
   line-height: 17px;
   color: $primary-text-color;
   position: relative;
+  cursor: pointer;
+  transition: opacity $default-transition;
 
   &::after {
     content: "";
@@ -95,6 +141,15 @@
     top: 50%;
     transform: translateY(-50%);
     right: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    @include defaultHoverEffect;
+  }
+
+  &:active {
+    @include defaultActiveEffect;
   }
 }
 

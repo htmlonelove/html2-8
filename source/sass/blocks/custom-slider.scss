@@ -1,0 +1,66 @@
+.custom-slider {
+  width: 250px;
+  height: 1px;
+  background-color: $primary-border-color;
+  margin-top: 56px;
+}
+
+.custom-slider__active {
+  position: relative;
+  height: 1px;
+  background-color: $primary-text-color;
+}
+
+.custom-slider__from,
+.custom-slider__to {
+  width: 14px;
+  height: 14px;
+  background-color: $primary-text-color;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  top: 50%;
+  cursor: pointer;
+  transition: background-color $default-transition;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($primary-text-color, 10%);
+  }
+
+  &:active {
+    background-color: lighten($primary-text-color, 30%);
+  }
+}
+
+.custom-slider__from {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.custom-slider__to {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.custom-slider__from-input,
+.custom-slider__to-input {
+  position: absolute;
+  top: -36px;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  font-family: $primary-font;
+  font-size: 16px;
+  color: $secondary-text-color;
+  display: block;
+  text-align: right;
+}
+
+.custom-slider__from-input {
+  left: -180px;
+}
+
+.custom-slider__to-input {
+  right: -180px;
+  text-align: left;
+}

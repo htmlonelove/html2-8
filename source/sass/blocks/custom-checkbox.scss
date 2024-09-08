@@ -1,0 +1,81 @@
+.custom-checkbox {
+  display: flex;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: opacity $default-transition;
+
+  &:hover,
+  &:focus {
+    @include defaultHoverEffect;
+  }
+
+  &:active {
+    @include defaultActiveEffect;
+  }
+}
+
+.custom-checkbox__label {
+  margin-left: 30px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 17px;
+  color: $secondary-text-color;
+}
+
+.custom-checkbox__checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $primary-border-color;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--round {
+    border-radius: 50%;
+  }
+
+  &--red {
+    background-color: #e97e7e;
+  }
+  &--brown {
+    background-color: #927c76;
+  }
+  &--blue {
+    background-color: #87a0fb;
+  }
+  &--yellow {
+    background-color: #efb954;
+  }
+}
+
+.custom-checkbox__actual-checkbox:checked + .custom-checkbox__checkbox {
+  border: 1px solid $primary-text-color;
+  background-color: $primary-text-color;
+
+  &--red {
+    background-color: #e97e7e;
+  }
+  &--brown {
+    background-color: #927c76;
+  }
+  &--blue {
+    background-color: #87a0fb;
+  }
+  &--yellow {
+    background-color: #efb954;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/icons/checkmark.svg");
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 7px;
+  }
+}
