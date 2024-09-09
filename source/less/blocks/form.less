@@ -19,7 +19,7 @@
 
   @media (min-width: @desktop-width) {
     border: 1px solid #e0deda;
-    grid-template-columns: 120px 485px 487px auto;
+    grid-template-columns: 120px 485px 486px auto;
     grid-template-rows: auto;
     row-gap: 0;
     padding: 0;
@@ -54,23 +54,52 @@
   grid-column: 1/2;
   grid-row: 1/2;
   display: grid;
-  width: 100%;
-  height: 100%;
+  height: 80px;
   align-items: center;
   justify-content: center;
   border: 1px solid #e0deda;
   background-color: #f5f4f2;
 
   @media (min-width: @desktop-width) {
+    height: 130px;
     border-top: 0;
     border-bottom: 0;
     border-left: 0;
   }
 }
 
-.form__image {
+.form__image img{
   display: block;
-  object-fit: cover;
+}
+
+.form__image--bag {
+  width: 52px;
+  height: 42px;
+
+  @media (min-width: @desktop-width) {
+    width: 79px;
+    height: 70px;
+  }
+}
+
+.form__image--black-shoes {
+  width: 96px;
+  height: 87px;
+
+  @media (min-width: @desktop-width) {
+    width: 120px;
+    height: 130px;
+  }
+}
+
+.form__image--white-shoes {
+  width: 61px;
+  height: 45px;
+
+  @media (min-width: @desktop-width) {
+    width: 91px;
+    height: 73px;
+  }
 }
 
 .form__product-name {
@@ -241,6 +270,7 @@
   padding: 9px 5px 9px 16px;
   border: none;
   outline: 1px solid #e0deda;
+  appearance: textfield;
 
   @media (min-width: @desktop-width) {
     height: 46px;
