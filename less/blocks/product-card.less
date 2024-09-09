@@ -67,16 +67,17 @@
   background-color: #F5F4F2;
   border: none;
 
-  & img {
-    max-height: 100%;
-  }
-
   @media (min-width: @desktop-width) {
     left: 0;
     transform: none;
     height: 500px;
     border: 1px solid #e0deda;
   }
+}
+
+.product-card__chosen-image {
+  width: auto;
+  max-height: 100%;
 }
 
 .product-card__back-button {
@@ -117,14 +118,15 @@
   height: 90px;
   background-color: #f5f4f2;
   border: 1px solid #e0deda;
-
-  & img {
-    max-height: 100%;
-  }
 }
 
 .product-card__slide--current {
   border-color: #474442;
+}
+
+.product-card__slide-image {
+  width: auto;
+
 }
 
 .product-card__header {

@@ -27,7 +27,7 @@
   }
 }
 
-.product-tabs__button-wrapper {
+.product-tabs__tab-button-wrapper {
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -124,13 +124,13 @@
   height: 186px;
   background-color: #f5f4f2;
 
-  & img {
-    max-height: 100%;
-  }
-
   @media (min-width: @desktop-width) {
     height: 320px;
   }
+}
+
+.product-tabs__item-image {
+  max-height: 100%;
 }
 
 .product-tabs__item-title {
@@ -152,7 +152,7 @@
   opacity: 0.5;
 }
 
-.button-wrapper {
+.product-tabs__catalog-button-wrapper {
   position: relative;
   width: 200px;
   padding: 0 20px;
