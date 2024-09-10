@@ -54,7 +54,8 @@
     .flex(space-between, center);
     padding: 14px 49px 0 46px;
   }
-  a{
+
+  a {
     .transition(opacity);
 
     &:hover {
@@ -72,6 +73,7 @@
   &:hover {
     opacity: 0.5;
   }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
     margin-right: 123px;
@@ -148,52 +150,18 @@
   flex-shrink: 1;
   .transition(background-color);
 
-  &:hover {
+  a {
+    height: 100%;
+    width: 100%;
+    .flex(center, center);
+  }
+
+  a:hover {
     background-color: @color-474442;
   }
-  &:hover a{
-    background-color: @color-white;
-  }
 
-  a {
-    display: block;
-    width: 19px;
-    height: 19px;
-  }
-
-  &--telegram {
-    a {
-      mask-image: ~'url("./img/stack.svg#telegram")';
-      background-color: @color-474442;
-    }
-  }
-
-  &--facebook {
-    a {
-      mask-image: ~'url("./img/stack.svg#facebook")';
-      background-color: @color-474442;
-    }
-  }
-
-  &--instagram {
-    a {
-      mask-image: ~'url("./img/stack.svg#instagram")';
-      background-color: @color-474442;
-    }
-  }
-
-  &--vkontakte {
-    a {
-      mask-image: ~'url("./img/stack.svg#vkontakte")';
-      background-color: @color-474442;
-    }
-  }
-
-  &--tiktok {
-    a {
-      mask-image: ~'url("./img/stack.svg#tiktok")';
-      background-color: @color-474442;
-    }
+  a:hover svg path{
+    fill: @color-white;
   }
 }
 
@@ -222,7 +190,7 @@
 .footer__politics::after {
   content: "";
   position: absolute;
-  bottom : -1px;
+  bottom: -1px;
   left: 0;
   height: 1px;
   width: 100%;

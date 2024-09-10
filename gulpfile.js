@@ -94,38 +94,6 @@ export const optimizeSvg = () => {
     .pipe(gulp.dest('build/img'))
 };
 
-export const spriteSvg = () => {
-  return gulp.src(['img/icons/*.svg'])
-    .pipe(
-      svgo({
-        plugins: [
-          {
-            name: 'removeViewBox',
-            active: false
-          },
-          {
-            name: 'cleanupIDs',
-            active: false
-          }
-        ]
-      })
-    )
-    .pipe(stacksvg({ output: 'stack', separator: '__', spacer: '-' }))
-    .pipe(gulp.dest('build/img'))
-};
-
-// Copy Icons
-export const copyIco = (done) => {
-  gulp.src([
-    '/*.ico',
-    '/*.webmanifest'
-  ], {
-    base: ''
-  })
-    .pipe(gulp.dest('build/'));
-  done();
-};
-
 // Copy Fonts
 export const copyFonts = (done) => {
   gulp.src([
@@ -172,7 +140,6 @@ const watcher = () => {
 // Build
 export const build = gulp.series(
   clean,
-  copyIco,
   copyFonts,
   optimizePngJpg,
   gulp.parallel(
@@ -180,7 +147,6 @@ export const build = gulp.series(
     html,
     scripts,
     optimizeSvg,
-    spriteSvg,
     createWebp
   ),
 );
@@ -188,7 +154,6 @@ export const build = gulp.series(
 // Default
 export default gulp.series(
   clean,
-  copyIco,
   copyFonts,
   copyPngJpg,
   gulp.parallel(
@@ -196,7 +161,6 @@ export default gulp.series(
     html,
     scripts,
     optimizeSvg,
-    spriteSvg,
     createWebp
   ),
   gulp.series(
