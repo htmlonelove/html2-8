@@ -6,13 +6,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="icon" href="favicon-16.ico"/>
-  <link rel="icon" href="favicon-32.ico"/>
-  <link rel="icon" href="favicon/icon.svg" type="image/svg+xml"/>
-  <link rel="apple-touch-icon" href="favicon/apple.png"/>
-  <link rel="manifest" href="manifest.webmanifest"/>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="preload" href="fonts/Forum.woff2" as="font"/>
   <script>
     document.createElement("picture");
   </script>
@@ -29,7 +23,7 @@
         <input type="email" name="customer-email" id="customer-email" class="subscribe__input" placeholder="Ваш e-mail"/>
         <span class="subscribe__error">Кажется в данном поле ошибка</span>
       </label>
-      <label class="subscribe__label">
+      <label class="subscribe__label subscribe__label--select">
         <select name="customer-type" id="customer-type" class="subscribe__select">
           <option value="Для женщин" class="subscribe__option">Для женщин</option>
           <option value="Для мужчин" class="subscribe__option">Для мужчин</option>
@@ -240,5 +234,6 @@
     </div>
   </div>
 </section>
+<script src="js/script.js"></script>
 </body>
 </html>

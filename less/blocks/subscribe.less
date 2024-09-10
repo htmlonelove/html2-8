@@ -47,8 +47,15 @@
   padding: 18px 26px 16px 0;
   letter-spacing: -0.02em;
   border: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid @color-5f5f5f;
   width: 100%;
+  .two-properties-transition(border-bottom, color);
+
+  &:focus {
+    color: @color-474442;
+    outline: 1px solid @color-474442;
+  }
+
   @media (min-width: @desktop-width) {
     padding-bottom: 14px;
   }
@@ -69,7 +76,7 @@
   }
 }
 
-.subscribe__input{
+.subscribe__input {
   @media (min-width: @desktop-width) {
     padding-right: 40px;
   }
@@ -77,8 +84,10 @@
 
 .subscribe__select {
   appearance: none;
-  background: ~'url("img/stack.svg#select")' no-repeat top 54% right 2px;
-  background-size: 14px 9px;
+  background-color: transparent;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
 
   @media (min-width: @desktop-width) {
     padding-right: 50px;
@@ -106,6 +115,16 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
   }
+}
+
+.subscribe__label--select {
+  background: ~'url("img/stack.svg#select")' no-repeat top 54% right 2px;
+  background-size: 14px 9px;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 .subscribe__error {
@@ -138,6 +157,11 @@
   padding: 17px 82px;
   max-width: 100%;
   .two-properties-transition(background-color, color);
+
+  &:hover {
+    cursor: pointer;
+  }
+
   @media (min-width: @desktop-width) {
     padding: 17px 98px;
     margin-left: auto;
