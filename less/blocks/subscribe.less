@@ -44,21 +44,10 @@
 .subscribe__input, .subscribe__select {
   font-family: @font-family-walsheim-pro;
   .font(16px, 22px, @color-5f5f5f);
-  padding: 18px 26px 16px 0;
   letter-spacing: -0.02em;
   border: none;
   border-bottom: 1px solid @color-5f5f5f;
-  width: 100%;
   .two-properties-transition(border-bottom, color);
-
-  &:focus {
-    color: @color-474442;
-    outline: 1px solid @color-474442;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 14px;
-  }
 }
 
 .subscribe__description {
@@ -77,54 +66,57 @@
 }
 
 .subscribe__input {
+  width: 100%;
+  padding: 18px 26px 16px 0;
+
+  &:focus {
+    color: @color-474442;
+    border-bottom: 1px solid @color-474442;
+  }
+
   @media (min-width: @desktop-width) {
     padding-right: 40px;
-  }
-}
-
-.subscribe__select {
-  appearance: none;
-  background-color: transparent;
-  margin: 0;
-  outline: none;
-  cursor: pointer;
-
-  @media (min-width: @desktop-width) {
-    padding-right: 50px;
+    padding-bottom: 14px;
   }
 }
 
 .subscribe__label {
   position: relative;
   display: block;
+  margin-bottom: 8px;
   @media (min-width: @desktop-width) {
+    margin-bottom: 0;
     margin-right: 22px;
     flex-basis: 33%;
   }
 }
 
-.subscribe__label:not(:last-of-type) {
-  margin-bottom: 8px;
-  @media (min-width: @desktop-width) {
-    margin-bottom: 0;
-  }
-}
-
-.subscribe__label:last-of-type {
+.subscribe__select {
+  width: 100%;
   margin-bottom: 32px;
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+    margin-right: 22px;
+    flex-basis: 33%;
   }
 }
 
-.subscribe__label--select {
-  background: ~'url("img/stack.svg#select")' no-repeat top 54% right 2px;
-  background-size: 14px 9px;
-  cursor: pointer;
-}
+.subscribe__select button {
+  .button-reset();
+  font-family: @font-family-walsheim-pro;
+  .font(16px, 22px, @color-5f5f5f);
+  letter-spacing: -0.02em;
+  padding: 18px 26px 16px 0;
+  height: 100%;
 
-select::-ms-expand {
-  display: none;
+  &:active {
+    color: @color-474442;
+    border-bottom: 1px solid @color-474442;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 14px;
+  }
 }
 
 .subscribe__error {

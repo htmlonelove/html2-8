@@ -1,0 +1,61 @@
+.select {
+  position: relative;
+}
+
+.select__result {
+  .button-reset();
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: ~'url("img/stack.svg#select")' no-repeat top 54% right 2px;
+  background-size: 14px 9px;
+  cursor: pointer;
+}
+
+.select__options {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  //border-left: 1px solid @color-5f5f5f;
+  //border-right: 1px solid @color-5f5f5f;
+  //border-bottom: 1px solid @color-5f5f5f;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  background-color: @color-white;
+}
+.select__options.active {
+  display: flex;
+}
+
+.select__label {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid @color-5f5f5f;
+}
+
+.select__label:hover{
+  cursor: pointer;
+}
+
+.select__input:checked + label {
+  background-color: @color-5f5f5f;
+  color: @color-white;
+}
+
+.select__input:not(:disabled):hover + label{
+  border-color: @color-5f5f5f;
+}
+
+.select__input:not(:disabled):focus + label {
+  outline: 1px solid @color-474442;
+}
+
+.select__input:disabled + label{
+  border-color: @color-5f5f5f;
+  opacity: 0.3;
+  pointer-events: none;
+}

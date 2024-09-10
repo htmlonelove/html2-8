@@ -1,1 +1,1 @@
-
+const selectResult=document.querySelector(".select__result"),selectOptionsContainer=document.querySelector(".select__options"),selectOptions=document.querySelectorAll(".select__input");selectResult.addEventListener("click",(()=>{selectOptionsContainer.classList.toggle("active")})),selectOptions.forEach((e=>{e.addEventListener("click",(e=>{selectResult.textContent=e.currentTarget.nextSibling.nextSibling.textContent,selectOptionsContainer.classList.toggle("active")}))}));
