@@ -40,13 +40,13 @@
 .catalog__buttons {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   align-items: center;
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 278px 1fr 278px;
-    gap: 24px;
+    gap: 23px;
     justify-items: start;
     margin-bottom: 24px;
   }
@@ -64,6 +64,12 @@
   position: relative;
   cursor: pointer;
   transition: opacity $default-transition;
+  @include mp0;
+  padding-right: 23px;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 15px;
+  }
 
   &:hover,
   &:focus {
@@ -83,17 +89,19 @@
     background-image: url('../img/icons/arrow.svg');
     top: 50%;
     transform: translateY(-50%);
-    right: -15px;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include mp0;
+    right: 0;
   }
 }
 
-.catalog__button--filters::after {
-  transform: translateY(-50%) rotate(-90deg);
-  right: -19px;
+
+.catalog__button--filters {
+  @media (min-width: $desktop-width) {
+    padding-right: 19px;
+
+    &::after {
+      transform: translateY(-50%) rotate(-90deg);
+    }
+  }
 }
 
 .catalog__select-group {
@@ -102,12 +110,18 @@
 }
 
 .catalog__button-sort {
-  padding-left: 24px;
+  margin-right: 3px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 24px;
+  }
 }
 
 .catalog__button-sort-text {
-  display: block;
-  margin-right: 89px;
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-right: 89px;
+  }
 }
 
 .catalog__active-filters {
@@ -155,15 +169,22 @@
   &:active {
     @include defaultActiveEffect;
   }
+
+  &--alternate {
+    padding-right: 36px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #1c192c;
+  }
 }
 
 .catalog__items-wrapper {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 14px;
+  row-gap: 10px;
   column-gap: 7px;
   margin-bottom: 40px;
-  
+
   @media (min-width: $desktop-width) {
     gap: 24px;
   }
