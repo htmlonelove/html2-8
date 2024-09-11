@@ -26,7 +26,7 @@
   border-bottom: 1px solid @color-e0deda;
   @media (min-width: @desktop-width) {
     .flex(flex-start, stretch);
-    padding: 0 0 32px 44px;
+    padding: 0 12px 32px 44px;
     border-bottom: none;
   }
 }
@@ -68,7 +68,12 @@
   display: block;
   margin-bottom: 30px;
   flex-shrink: 1;
+  height: fit-content;
   .transition(opacity);
+
+  img {
+    height: auto;
+  }
 
   &:hover {
     opacity: 0.5;
@@ -76,7 +81,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    margin-right: 123px;
+    margin-right: 128px;
   }
 }
 
@@ -93,7 +98,7 @@
   }
 
   a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-family: @font-family-walsheim-pro;
     .font(16px, 22px, @color-474442);
@@ -114,11 +119,15 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 10px;
+    column-gap: 8px;
     row-gap: 10px;
-    width: 63%;
+    width: 65%;
     text-align: left;
   }
+}
+
+.footer__nav-item {
+  .flex(flex-start, flex-start, column);
 }
 
 .footer__nav-item:not(:last-child) {
@@ -160,7 +169,7 @@
     background-color: @color-474442;
   }
 
-  a:hover svg path{
+  a:hover svg path {
     fill: @color-white;
   }
 }
