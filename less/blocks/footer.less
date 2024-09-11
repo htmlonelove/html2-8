@@ -25,8 +25,8 @@
   padding: 0 20px 32px;
   border-bottom: 1px solid @color-e0deda;
   @media (min-width: @desktop-width) {
-    .flex(flex-start, stretch);
-    padding: 0 12px 32px 44px;
+    .flex(space-between, stretch);
+    padding: 0 28px 32px 47px;
     border-bottom: none;
   }
 }
@@ -81,7 +81,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    margin-right: 128px;
+    //margin-right: 128px;
   }
 }
 
@@ -118,10 +118,10 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 8px;
+    grid-template-columns: repeat(auto-fill, 31%);
+    column-gap: 10px;
     row-gap: 10px;
-    width: 65%;
+    width: 68%;
     text-align: left;
   }
 }
