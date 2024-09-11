@@ -139,6 +139,8 @@
   grid-area: header;
 
   @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-bottom: 39px;
     max-width: 380px;
     align-items: start;
   }
@@ -173,6 +175,7 @@
   margin-bottom: 8px;
 
   @media (min-width: @desktop-width) {
+    .font-sizes(28px; 34px; 500);
     margin-bottom: 16px;
   }
 }
@@ -212,6 +215,10 @@
   gap: 20px;
   padding-bottom: 44px;
   grid-area: detail;
+
+  @media (min-width: @desktop-width) {
+    gap: 18px;
+  }
 }
 
 // * Тоже что и product-card__header-title
@@ -224,7 +231,7 @@
   margin-bottom: 4px;
 
   @media (min-width: @desktop-width) {
-    .font-sizes(32px; 38px; 400);
+    .font-sizes(40px; 40px; 400);
     text-align: start;
   }
 }
@@ -234,6 +241,10 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
+  }
 }
 
 .product-card__detail-list-title {
