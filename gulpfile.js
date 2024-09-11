@@ -10,7 +10,6 @@ import csso from 'postcss-csso';
 import squoosh from 'gulp-squoosh';
 import { deleteAsync } from 'del';
 import svgo from "gulp-svgmin";
-import { stacksvg } from "gulp-stacksvg";
 import terser from 'gulp-terser';
 
 
@@ -63,6 +62,35 @@ export const optimizePngJpg = () => {
     .pipe(gulp.dest('build/img'))
 };
 
+export const optimizeSvgFavicon = () => {
+  return gulp.src(['favicon/*.svg'])
+    .pipe(
+      svgo({
+        plugins: [
+          {
+            name: 'removeViewBox',
+            active: false
+          },
+          {
+            name: 'cleanupIDs',
+            active: false
+          }
+        ]
+      }))
+    .pipe(gulp.dest('build/favicon'))
+};
+
+export const optimizePngFavicon = () => {
+  return gulp.src(['favicon/*.png'])
+    .pipe(squoosh(({ filePath }) => {
+        return {
+          encodeOptions: { oxipng: {} },
+        };
+      }
+    ))
+    .pipe(gulp.dest('build/favicon'))
+};
+
 
 // WebP
 export const createWebp = () => {
@@ -100,6 +128,15 @@ export const copyFonts = (done) => {
     'fonts/**/*.{woff2,woff}'
   ])
     .pipe(gulp.dest('build/fonts'));
+  done();
+};
+
+// Copy
+export const copy = (done) => {
+  gulp.src([
+    '*.ico',
+  ])
+    .pipe(gulp.dest('build'));
   done();
 };
 
@@ -141,11 +178,14 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   copyFonts,
+  copy,
   optimizePngJpg,
   gulp.parallel(
     styles,
     html,
     scripts,
+    optimizePngFavicon,
+    optimizeSvgFavicon,
     optimizeSvg,
     createWebp
   ),
@@ -155,12 +195,15 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copyFonts,
+  copy,
   copyPngJpg,
   gulp.parallel(
     styles,
     html,
     scripts,
     optimizeSvg,
+    optimizePngFavicon,
+    optimizeSvgFavicon,
     createWebp
   ),
   gulp.series(
