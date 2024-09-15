@@ -9,8 +9,6 @@
 }
 
 .instagram__container{
-  max-width: @content-max-width;
-  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -43,7 +41,9 @@
 
 .instagram__slider {
   height: 230px;
+  width: 100%;
   margin-bottom: 24px;
+  .flex(center,center);
   @media (min-width: @desktop-width) {
     height: 278px;
     margin-bottom: 48px;

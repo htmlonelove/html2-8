@@ -131,12 +131,21 @@ export const copyFonts = (done) => {
   done();
 };
 
-// Copy
-export const copy = (done) => {
+// Copy Ico
+export const copyIco = (done) => {
   gulp.src([
-    '*.ico',
+    '*.ico'
   ])
     .pipe(gulp.dest('build'));
+  done();
+};
+
+// Copy Assets
+export const copyAssets = (done) => {
+  gulp.src([
+    'assets/**/*.{js,css}'
+  ])
+    .pipe(gulp.dest('build/assets'));
   done();
 };
 
@@ -178,7 +187,8 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   copyFonts,
-  copy,
+  copyIco,
+  copyAssets,
   optimizePngJpg,
   gulp.parallel(
     styles,
@@ -195,7 +205,8 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copyFonts,
-  copy,
+  copyIco,
+  copyAssets,
   copyPngJpg,
   gulp.parallel(
     styles,

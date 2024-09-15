@@ -7,22 +7,44 @@
   display: block;
   width: 100%;
   text-align: left;
-  background: ~'url("img/icons/select.svg")' no-repeat top 54% right 2px;
-  background-size: 14px 9px;
+  padding: 18px 26px 16px 20px;
+  background-color: @color-white;
   cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+}
+
+.select__result::after{
+  content:"";
+  width: 14px;
+  height: 9px;
+  position: absolute;
+  top: 49%;
+  right: 2px;
+  background: ~'url("img/icons/select.svg")' no-repeat center;
+  background-size: 100%;
+}
+
+.select__result.active::after{
+  transform: rotate(180deg);
 }
 
 .select__options {
   display: none;
   position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  padding: 10px;
+  top: 50px;
+  left: -10px;
+  width: 110%;
+  z-index: 0;
   flex-direction: column;
   align-items: center;
   background-color: @color-white;
+  box-shadow: 0 4px 2px #342D2D29;
+  text-align: left;
 }
+
 .select__options.active {
   display: flex;
 }
@@ -30,21 +52,16 @@
 .select__label {
   display: block;
   width: 100%;
-  padding: 6px 10px;
-  border: 1px solid @color-5f5f5f;
+  padding: 18px 26px 16px 12px;
+  user-select: none;
 }
 
 .select__label:hover{
   cursor: pointer;
 }
 
-.select__input:checked + label {
-  background-color: @color-5f5f5f;
-  color: @color-white;
-}
-
 .select__input:not(:disabled):hover + label{
-  border-color: @color-5f5f5f;
+  background-color: @background-color-f5f4f2;
 }
 
 .select__input:not(:disabled):focus + label {
@@ -52,7 +69,6 @@
 }
 
 .select__input:disabled + label{
-  border-color: @color-5f5f5f;
   opacity: 0.3;
   pointer-events: none;
 }
