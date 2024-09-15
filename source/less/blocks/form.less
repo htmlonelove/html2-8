@@ -13,8 +13,9 @@
   position: relative;
   padding: 32px 0;
   display: grid;
-  grid-template-columns: 80px 96px 111px 48px;
+  grid-template-columns: 78px 167px auto;
   grid-template-rows: repeat(3, auto);
+  gap: 20px;
   row-gap: 10px;
 
   @media (min-width: @desktop-width) {
@@ -109,10 +110,9 @@
 }
 
 .form__product-name {
-  margin: 0 0 0 20px;
-  grid-column: 2/4;
+  margin: 0;
+  grid-column: 2/3;
   grid-row: 1/2;
-  width: 187px;
   text-decoration: none;
   text-align: left;
   transition: color 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95), opacity 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
@@ -165,7 +165,7 @@
   min-height: 80px;
   background-color: #ffffff;
   border: 1px solid #e0deda;
-  grid-column: 4/5;
+  grid-column: 3/4;
   grid-row: 1/2;
 
   &::before,
@@ -213,10 +213,10 @@
 
 .form__info-names {
   padding-top: 6px;
-  grid-column: 1/5;
+  grid-column: 1/4;
   grid-row: 2/3;
   display: grid;
-  grid-template-columns: 80px 106px 109px;
+  grid-template-columns: 78px 106px auto;
   gap: 20px;
   text-align: left;
 
@@ -246,10 +246,10 @@
 }
 
 .form__info-prices {
-  grid-column: 1/5;
+  grid-column: 1/4;
   grid-row: 3/4;
   display: grid;
-  grid-template-columns: 80px 106px 109px;
+  grid-template-columns: 78px auto auto;
   gap: 20px;
   text-align: left;
 
