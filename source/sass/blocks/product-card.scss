@@ -65,10 +65,14 @@
 
 .product-card__item-description {
   @include mp0;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 14px;
   font-weight: 400;
   font-family: $primary-font;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 12px;
+  }
 }
 
 .product-card__item-price {
