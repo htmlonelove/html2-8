@@ -145,8 +145,9 @@
   background-color: #474442;
   font-family: @font-family-walsheim-pro;
   .font(16px, 19px, @color-white, 500);
-  padding: 17px 82px;
-  max-width: 100%;
+  padding: 17px 22px;
+  width: 100%;
+  .flex(center,center);
   .two-properties-transition(background-color, color);
 
   &:hover {
@@ -156,6 +157,7 @@
   @media (min-width: @desktop-width) {
     padding: 17px 98px;
     margin-left: auto;
+    max-width: 294px;
   }
 
   &:hover {
