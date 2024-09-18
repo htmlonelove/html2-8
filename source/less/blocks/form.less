@@ -19,7 +19,7 @@
   row-gap: 10px;
 
   @media (min-width: @desktop-width) {
-    border: 1px solid #e0deda;
+    border: 1px solid @border-color;
     grid-template-columns: 120px 485px 486px auto;
     grid-template-rows: auto;
     row-gap: 0;
@@ -30,7 +30,7 @@
 
 .form__item:not(:first-child) {
   @media (min-width: @desktop-width) {
-    border-top: 1px solid #e0deda;
+    border-top: 1px solid @border-color;
   }
 }
 
@@ -65,8 +65,8 @@
   height: 80px;
   align-items: center;
   justify-content: center;
-  border: 1px solid #e0deda;
-  background-color: #f5f4f2;
+  border: 1px solid @border-color;
+  background-color: @secondary-color;
 
   @media (min-width: @desktop-width) {
     height: 127px;
@@ -137,7 +137,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #474442;
+  color: @basic-color;
 
   @media (min-width: @desktop-width) {
     padding-top: 5px;
@@ -153,7 +153,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #acacac;
+  color: @state-color;
 
   @media (min-width: @desktop-width) {
     max-width: 336px;
@@ -164,8 +164,8 @@
   position: relative;
   width: 48px;
   min-height: 80px;
-  background-color: #ffffff;
-  border: 1px solid #e0deda;
+  background-color: @primary-color;
+  border: 1px solid @border-color;
   grid-column: 3/4;
   grid-row: 1/2;
 
@@ -177,7 +177,7 @@
     height: 2px;
     left: 17px;
     top: 36px;
-    background-color: #474442;
+    background-color: @basic-color;
     transform: rotate(45deg);
   }
 
@@ -203,12 +203,12 @@
 
 .form__product-button:hover,
 .form__product-button:focus {
-  background-color: #f5f4f2;
+  background-color: @secondary-color;
   outline: none;
 }
 
 .form__product-button:active {
-  background-color: #f5f4f2;
+  background-color: @secondary-color;
   opacity: 0.5;
 }
 
@@ -231,7 +231,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
-  color: #5f5f5f;
+  color: @additional-color;
 }
 
 //--head
@@ -268,7 +268,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #474442;
+  color: @basic-color;
 }
 
 .form__field {
@@ -276,7 +276,7 @@
   height: 40px;
   padding: 9px 5px 9px 16px;
   border: none;
-  outline: 1px solid #e0deda;
+  outline: 1px solid @border-color;
   appearance: textfield;
 
   @media (min-width: @desktop-width) {
@@ -299,7 +299,7 @@
 
 .form__info-price-value,
 .form__order-price-value {
-  color: #acacac;
+  color: @state-color;
 }
 
 //--promo
@@ -315,7 +315,7 @@
     content: "";
     width: 800%;
     height: 95px;
-    background-color: #f5f4f2;
+    background-color: @secondary-color;
     display: block;
     bottom: 0;
     z-index: -1;
@@ -328,7 +328,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 41px 0 41px 40px;
-    border: 1px solid #e0deda;
+    border: 1px solid @border-color;
     border-top: none;
 
     &::after,
@@ -345,7 +345,7 @@
   height: 100%;
   font-size: 14px;
   line-height: 16px;
-  color: #474442;
+  color: @basic-color;
 
   @media (min-width: @desktop-width) {
     margin-right: 0;
@@ -358,11 +358,11 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  color: #474442;
+  color: @basic-color;
 }
 
 .form__group--promo .form__field:focus {
-  outline: 2px solid #474442;
+  outline: 2px solid @basic-color;
 }
 
 .form__promo-button {
@@ -372,7 +372,7 @@
   border: none;
   text-align: left;
   text-decoration: underline;
-  color: #474442;
+  color: @basic-color;
   background-color: transparent;
 
   @media (min-width: @desktop-width) {
@@ -411,7 +411,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #5f5f5f;
+  color: @additional-color;
 }
 
 .form__order-price {
@@ -419,7 +419,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
-  color: #474442;
+  color: @basic-color;
 
   @media (min-width: @desktop-width) {
     font-size: 32px;

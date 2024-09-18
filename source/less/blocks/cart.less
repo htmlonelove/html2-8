@@ -51,7 +51,7 @@
   font-size: 32px;
   line-height: 32px;
   letter-spacing: -0.02em;
-  color: #474442;
+  color: @basic-color;
   max-width: 283px;
   justify-self: center;
 
@@ -69,7 +69,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #5f5f5f;
+  color: @additional-color;
 
   @media (min-width: @desktop-width) {
     margin-bottom: 48px;
@@ -103,18 +103,18 @@
 }
 
 .cart__button--light {
-  color: #474442;
-  background-color: #ffffff;
-  border: 1px solid #474442;
+  color: @basic-color;
+  background-color: @primary-color;
+  border: 1px solid @basic-color;
 }
 
 .cart__button--light:hover,
 .cart__button--light:focus {
-  background-color: #f5f4f2;
+  background-color: @secondary-color;
 }
 
 .cart__button--light:active {
-  border: 1px solid #acacac;
-  color: #acacac;
+  border: 1px solid @state-color;
+  color: @state-color;
   background-color: transparent;
 }
