@@ -3,7 +3,7 @@
   height: 44px;
   background-color: #ffffff;
   background-position: 50%;
-  border: 1px solid #e0deda;
+  border: 1px solid @light-border;
   border-radius: 50%;
   z-index: 5;
   transition-property: background-color, color, border-color;
@@ -12,16 +12,16 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #f5f4f2;
-    border-color: #474442;
+    background-color: @light-background;
+    border-color: @base-dark-grey;
   }
 
   &:focus {
-    border-color: #474442;
+    border-color: @base-dark-grey;
   }
 
   &:active {
-    background-color: #f5f4f2;
-    border-color: #e0deda;
+    background-color: @light-background;
+    border-color: @light-border;
   }
 }

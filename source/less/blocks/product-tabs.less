@@ -1,6 +1,6 @@
 .product-tabs {
   position: relative;
-  color: #474442;
+  color: @base-dark-grey;
 
   &::after {
     position: absolute;
@@ -8,7 +8,7 @@
     bottom: 104px;
     width: 100%;
     content: '';
-    background-color: #e0deda;
+    background-color: @light-border;
 
     @media (min-width: @desktop-width) {
       bottom: 128px;
@@ -43,16 +43,16 @@
   font-family: @forum;
   letter-spacing: -0.02em;
   padding: 0;
-  color: #474442;
+  color: @base-dark-grey;
   background-color: #ffffff;
   border: none;
   transition: opacity 0.3s cubic-bezier(.45,.05,.55,.95);
 
-  &.not-active{
+  &--not-active{
     opacity: 0.4;
   }
 
-  &.not-active::after {
+  &--not-active::after {
     position: relative;
     bottom: 3px;
     display: block;
@@ -75,7 +75,7 @@
   position: relative;
   min-height: 288px;
 
-  &.is-active {
+  &--active {
     display: block;
   }
 }
@@ -118,7 +118,7 @@
 .product-tabs__link {
   display: flex;
   flex-direction: column;
-  color: #474442;
+  color: @base-dark-grey;
   text-decoration: none;
 
   @media (min-width: @desktop-width) {
@@ -126,23 +126,17 @@
   }
 }
 
-.product-tabs__item-image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 16px;
+.product-tabs__item-image {
   min-width: 164px;
-  height: 186px;
-  background-color: #f5f4f2;
+  min-height: 186px;
+  max-height: 100%;
+  margin-bottom: 16px;
+  background-color: @light-background;
 
   @media (min-width: @desktop-width) {
-    align-items: end;
-    height: 320px;
+    min-width: 278px;
+    min-height: 320px;
   }
-}
-
-.product-tabs__item-image {
-  max-height: 100%;
 }
 
 .product-tabs__item-title {

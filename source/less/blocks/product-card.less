@@ -5,7 +5,7 @@
 }
 
 .product-card__wrapper {
-  color: #474442;
+  color: @base-dark-grey;
   position: relative;
 
   &::after {
@@ -14,7 +14,7 @@
     left: 20px;
     right: 20px;
     height: 1px;
-    background-color: #e0deda;
+    background-color: @light-border;
     content: '';
 
     @media (min-width: @desktop-width) {
@@ -29,8 +29,8 @@
     column-gap: 64px;
     padding-top: 80px;
     grid-template-areas:
-      "slider header"
-      "slider detail";
+      'slider header'
+      'slider detail';
   }
 }
 
@@ -64,14 +64,14 @@
   min-width: 375px;
   height: 360px;
   margin-bottom: 24px;
-  background-color: #F5F4F2;
+  background-color: @light-background;
   border: none;
 
   @media (min-width: @desktop-width) {
     left: 0;
     transform: none;
     height: 500px;
-    border: 1px solid #e0deda;
+    border: 1px solid @light-border;
   }
 }
 
@@ -116,13 +116,13 @@
   align-items: center;
   min-width: 90px;
   height: 90px;
-  background-color: #f5f4f2;
-  border: 1px solid #e0deda;
+  background-color: @light-background;
+  border: 1px solid @light-border;
   cursor: pointer;
 }
 
 .product-card__slide--current {
-  border-color: #474442;
+  border-color: @base-dark-grey;
 }
 
 .product-card__slide-image {
@@ -181,7 +181,7 @@
 }
 
 .product-card__header-price-currency {
-  color: #acacac;
+  color: @light-grey-font;
 }
 
 .product-card__header-add-button {
@@ -193,7 +193,7 @@
   margin: 0;
   border: none;
   color: #ffffff;
-  background-color: #474442;
+  background-color: @base-dark-grey;
   transition-property: background-color, color;
   transition-duration: 0.3s;
   transition-timing-function: @basic-function;
@@ -204,7 +204,7 @@
   }
 
   &:active {
-    color: #acacac;
+    color: @light-grey-font;
     background-color: #5f5f5f;
   }
 }
@@ -221,7 +221,6 @@
   }
 }
 
-// * Тоже что и product-card__header-title
 .product-card__detail-title {
   font-family: @forum;
   .font-sizes(32px; 38px; 400);
@@ -271,7 +270,7 @@
 }
 
 .product-card__detail-name {
-  color: #acacac;
+  color: @light-grey-font;
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -283,7 +282,7 @@
   top: 16px;
   right: 0;
   height: 1px;
-  background-color: #e0deda;
+  background-color: @light-border;
   content: '';
 }
 

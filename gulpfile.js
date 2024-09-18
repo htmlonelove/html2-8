@@ -15,7 +15,7 @@ import { stacksvg } from "gulp-stacksvg";
 
 // Styles
 export const styles = () => {
-  return gulp.src('less/style.less', { sourcemaps: true })
+  return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -28,7 +28,7 @@ export const styles = () => {
 
 // HTML
 export const html = () => {
-  return gulp.src('index.html')
+  return gulp.src('source/index.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'))
     .pipe(browser.stream());
@@ -36,11 +36,11 @@ export const html = () => {
 
 // Images
 export const copyPngJpg = () => {
-  return gulp.src(['img/**/*.{png,jpg}'])
+  return gulp.src(['source/img/**/*.{png,jpg}'])
     .pipe(gulp.dest('build/img'))
 };
 export const optimizePngJpg = () => {
-  return gulp.src(['img/**/*.{png,jpg}'])
+  return gulp.src(['source/img/**/*.{png,jpg}'])
     .pipe(squoosh(({ filePath }) => {
       const imageExtension = path.extname(filePath);
       const optionsForPng = { oxipng: {} };
@@ -57,7 +57,7 @@ export const optimizePngJpg = () => {
 
 // WebP
 export const createWebp = () => {
-  return gulp.src(['img/*.{png,jpg}'])
+  return gulp.src(['source/img/*.{png,jpg}'])
     .pipe(squoosh({
       encodeOptions: {
         webp: {}
@@ -68,7 +68,7 @@ export const createWebp = () => {
 
 // SVG
 export const optimizeSvg = () => {
-  return gulp.src(['img/**/*.svg'])
+  return gulp.src(['source/img/**/*.svg'])
     .pipe(
       svgo({
         plugins: [
@@ -86,7 +86,7 @@ export const optimizeSvg = () => {
 };
 
 export const spriteSvg = () => {
-  return gulp.src(['img/icons/*.svg'])
+  return gulp.src(['source/img/icons/*.svg'])
     .pipe(
       svgo({
         plugins: [
@@ -120,7 +120,7 @@ export const copyIco = (done) => {
 // Copy Fonts
 export const copyFonts = (done) => {
   gulp.src([
-    'fonts/**/*.{woff2,woff}'
+    'source/fonts/*.{woff2,woff}'
   ])
     .pipe(gulp.dest('build/fonts'));
   done();
@@ -154,8 +154,8 @@ const reload = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch('less/**/*.less', gulp.series(styles));
-  gulp.watch('index.html', gulp.series(html));
+  gulp.watch('source/less/**/*.less', gulp.series(styles));
+  gulp.watch('source/index.html', gulp.series(html));
 };
 
 
